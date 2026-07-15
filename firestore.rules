@@ -1,0 +1,45 @@
+rules_version = '2';
+
+// =============================================================================
+// Fauran waitlist site — Firestore security rules
+// -----------------------------------------------------------------------------
+// Scope: the marketing/waitlist site writes to ONE dedicated collection,
+// `waitlist_signups`, and nothing else. Everything else is denied by default.
+//
+// ⚠ DEPLOY NOTE: `firebase deploy --only firestore:rules` REPLACES the whole
+// project's Firestore ruleset. Per the PRD the Fauran app uses Supabase/Postgres
+// for data and Firebase only for FCM push, so the project's Firestore is not the
+// app datastore — a deny-all-except-waitlist ruleset is safe here. Confirm this
+// is still true before deploying to a shared project.
+// =============================================================================
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default: deny every read and write everywhere.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // The only allowed operation on the whole database: create a signup.
+    match /waitlist_signups/{docId} {
+      allow create: if isValidSignup(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    function isValidSignup(d) {
+      return d.keys().hasOnly(['phone', 'city', 'role', 'source', 'createdAt'])
+        // phone is required and must be a normalised PK mobile number (E.164)
+        && d.phone is string
+        && d.phone.matches('^\\+923[0-9]{9}$')
+        // optional fields: present as strings, size-bounded, from known value sets
+        && d.city is string && d.city.size() <= 24
+        && (d.city == '' || d.city in ['lahore', 'islamabad', 'other'])
+        && d.role is string && d.role.size() <= 16
+        && (d.role == '' || d.role in ['hirer', 'pro'])
+        && d.source is string && d.source.size() <= 24
+        // server-stamped creation time only — no client-forged timestamps
+        && d.createdAt == request.time;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+# Runtime Firebase config — injected at deploy, never committed.
+firebase-config.js
+
+# Firebase / tooling
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+node_modules/

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+  <!-- Primary meta -->
+  <title>Fauran: Name your need, pros bid. Home services in Lahore &amp; Islamabad</title>
+  <meta name="description" content="Fauran is a bid-and-book marketplace for home and repair jobs in Pakistan. Post a job, verified pros nearby bid their price and arrival time, you pick and pay cash. Join the waitlist." />
+  <meta name="theme-color" content="#e8ece3" />
+  <meta name="color-scheme" content="light" />
+
+  <!-- TODO: confirm production domain; replace fauran.pk everywhere (see README placeholder register) -->
+  <link rel="canonical" href="https://fauran.pk/" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/fauran-logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/fauran-logo.svg" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fauran" />
+  <meta property="og:title" content="Fauran: Name your need, pros bid." />
+  <meta property="og:description" content="Post a home or repair job, verified pros nearby bid their price and arrival time, you pick and pay cash. Launching in Lahore &amp; Islamabad. Join the waitlist." />
+  <meta property="og:url" content="https://fauran.pk/" />
+  <meta property="og:locale" content="en_PK" />
+  <!-- [PLACEHOLDER] create assets/og.png (1200x630 raster) before launch -->
+  <meta property="og:image" content="https://fauran.pk/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Fauran logo with the tagline Ab Kam Hoga, Fauran." />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fauran: Name your need, pros bid." />
+  <meta name="twitter:description" content="Bid-and-book home services for Lahore &amp; Islamabad. Verified pros, cash paid direct. Join the waitlist." />
+  <meta name="twitter:image" content="https://fauran.pk/assets/og.png" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fauran",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "Android, iOS",
+    "description": "A proximity-based, bid-and-book marketplace connecting people in Pakistan with verified technicians, plumbers, electricians and other skilled professionals. Post a job, nearby pros bid a price and arrival time, you compare and book, then pay cash directly.",
+    "url": "https://fauran.pk/",
+    "inLanguage": "en",
+    "areaServed": ["Lahore", "Islamabad"],
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "PKR", "description": "Free for customers to post jobs and receive bids." }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================ NAV ============================ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Fauran home">
+        <img src="assets/fauran-logo.svg" alt="" width="28" height="28" />
+        <span>Fauran</span>
+      </a>
+      <div class="nav-actions">
+        <a class="btn btn-primary nav-cta" href="#waitlist">Join the waitlist</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Lahore &amp; Islamabad · Coming soon</span>
+            <h1 id="hero-title">Name your need. Pros bid. <span class="accent">Ab kam hoga, fauran.</span></h1>
+            <p class="hero-sub">Post any home or repair job. Verified pros nearby bid their price and arrival time. You pick. You pay cash, direct.</p>
+
+            <form class="hero-form js-waitlist-form" data-source="hero" novalidate>
+              <input type="text" class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+              <div class="field-row">
+                <div class="phone-wrap form-field">
+                  <label class="visually-hidden" for="hero-phone" style="position:absolute;left:-9999px">Phone number</label>
+                  <div class="phone-group">
+                    <span class="cc" aria-hidden="true">+92</span>
+                    <input class="control js-phone" id="hero-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="3XX XXXXXXX" required />
+                  </div>
+                  <p class="field-error" data-error>Enter a valid Pakistani mobile number.</p>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                  <span class="spin" aria-hidden="true"></span><span class="label">Join the waitlist</span>
+                </button>
+              </div>
+              <p class="hint">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                No spam. One text when we launch in your city.
+              </p>
+              <p class="form-status" role="status" aria-live="polite" data-status></p>
+            </form>
+          </div>
+
+          <!-- Phone mockup (PRD-accurate app preview; carousel) -->
+          <div class="phone-col">
+          <div class="phone-stage" aria-hidden="false">
+            <div class="phone">
+              <div class="phone-screen" role="group" aria-roledescription="carousel" aria-label="How Fauran works">
+                <span class="phone-notch" aria-hidden="true"></span>
+
+                <!-- Screen 1: Post a job -->
+                <div class="screen active" role="group" aria-roledescription="slide" aria-label="1 of 4: Post a job">
+                  <div class="screen-top"><span class="screen-title">Post a job</span><span class="screen-step">1 of 3</span></div>
+                  <div class="mini-card">
+                    <span class="mini-label">Service</span>
+                    <div class="chip-row" style="margin-top:6px">
+                      <span class="mini-chip on">Electrician</span>
+                      <span class="mini-chip">Plumber</span>
+                      <span class="mini-chip">AC tech</span>
+                    </div>
+                  </div>
+                  <div class="mini-card">
+                    <span class="mini-label">What's wrong</span>
+                    <p class="mini-strong" style="margin-top:4px">Two power sockets not working in the bedroom.</p>
+                  </div>
+                  <div class="mini-card">
+                    <div class="mini-row"><span class="mini-meta"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg> DHA Phase 5</span><span class="mini-meta">Now</span></div>
+                  </div>
+                  <div class="mini-btn">Post to nearby pros</div>
+                </div>
+
+                <!-- Screen 2: Incoming bids -->
+                <div class="screen" role="group" aria-roledescription="slide" aria-label="2 of 4: Compare bids">
+                  <div class="screen-top"><span class="screen-title">Incoming bids</span><span class="screen-step">5 bidding</span></div>
+                  <div class="mini-card">
+                    <div class="mini-row">
+                      <span class="mini-meta" style="gap:6px"><span class="avatar">AR</span><span><span class="mini-strong">Ahmed R.</span><br><span class="mini-meta"><span class="star">★</span> 4.8 · 2.1 km · Verified</span></span></span>
+                      <span class="mini-price">Rs 1,200</span>
+                    </div>
+                    <div class="mini-row" style="margin-top:8px"><span class="mini-meta">Arrives in 25 min</span><span class="mini-btn" style="margin:0;padding:6px 12px">Accept</span></div>
+                  </div>
+                  <div class="mini-card">
+                    <div class="mini-row">
+                      <span class="mini-meta" style="gap:6px"><span class="avatar">BK</span><span><span class="mini-strong">Bilal K.</span><br><span class="mini-meta"><span class="star">★</span> 4.6 · 3.4 km · Verified</span></span></span>
+                      <span class="mini-price">Rs 1,000</span>
+                    </div>
+                    <div class="mini-row" style="margin-top:8px"><span class="mini-meta">Arrives in 40 min</span><span class="mini-btn ghost" style="margin:0;padding:6px 12px">Chat</span></div>
+                  </div>
+                </div>
+
+                <!-- Screen 3: On the way -->
+                <div class="screen" role="group" aria-roledescription="slide" aria-label="3 of 4: Track your pro">
+                  <div class="screen-top"><span class="screen-title">On the way</span><span class="screen-step">Booked</span></div>
+                  <div class="mini-card" style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:6px">
+                    <span class="avatar" style="width:44px;height:44px;font-size:0.9rem">AR</span>
+                    <p class="mini-strong">Ahmed is on the way</p>
+                    <span class="mini-meta">Arriving in about 12 min</span>
+                    <div class="stepper" style="width:100%;margin-top:8px"><i class="done"></i><i class="done"></i><i></i></div>
+                    <div class="mini-row" style="width:100%;margin-top:2px"><span class="mini-meta">En route</span><span class="mini-meta">Arrived</span></div>
+                  </div>
+                </div>
+
+                <!-- Screen 4: Confirm with code -->
+                <div class="screen" role="group" aria-roledescription="slide" aria-label="4 of 4: Confirm with a code, pay cash">
+                  <div class="screen-top"><span class="screen-title">Confirm &amp; pay</span><span class="screen-step">Done</span></div>
+                  <div class="mini-card">
+                    <span class="mini-label">Share this code with Ahmed</span>
+                    <div class="code-box"><span class="code-digit">5</span><span class="code-digit">7</span><span class="code-digit">3</span><span class="code-digit">1</span></div>
+                  </div>
+                  <div class="mini-card">
+                    <div class="mini-row"><span class="mini-meta">Pay in cash</span><span class="mini-price">Rs 1,100</span></div>
+                    <p class="mini-meta" style="margin-top:6px">Fauran never touches your cash. You pay Ahmed directly.</p>
+                  </div>
+                  <div class="mini-btn">Mark as done</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="phone-dots" role="tablist" aria-label="App preview steps"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ PROBLEM ============================ -->
+    <section id="problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">The problem</span>
+          <h2 id="problem-title">Finding a good pro is slow, informal, and opaque.</h2>
+        </div>
+        <div class="problem-grid">
+          <div class="pain reveal d1">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.2-3.2"/></svg></span>
+            <div><h3>No price transparency</h3><p>You call around, wait for someone to show up, and only then hear a number you can't compare.</p></div>
+          </div>
+          <div class="pain reveal d2">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V6Z"/><path d="m9.2 12.2 1.9 1.9 3.7-3.9"/></svg></span>
+            <div><h3>No recourse if it goes wrong</h3><p>Word-of-mouth means no ratings, no history, and nowhere to turn when the work is poor.</p></div>
+          </div>
+          <div class="pain reveal d3">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3.2a4 4 0 0 1 0 7.6"/><path d="M22 21v-2a4 4 0 0 0-3-3.8"/><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></span>
+            <div><h3>Good pros get undercut</h3><p>Skilled professionals have no reliable channel to reach nearby paying work, so middlemen take the margin.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ SOLUTION ============================ -->
+    <section id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 id="how-title">Post. Compare bids. Book. Pay cash.</h2>
+          <p class="lead">The inDrive idea, for skilled trade work. You describe the job, and pros come to you with a price and an arrival time.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal d1">
+            <span class="step-n"></span>
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+            <h3>Post what you need</h3>
+            <p>Pick a trade, describe the job, drop a location and a photo. It goes only to verified pros in your area.</p>
+          </article>
+          <article class="step reveal d2">
+            <span class="step-n"></span>
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M5 8V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-1"/><path d="M3 12h7"/><path d="m7 9-3 3 3 3"/></svg>
+            <h3>Compare real bids</h3>
+            <p>See each pro's price, arrival time, rating, distance and verified badge. No fixed menu. They compete for you.</p>
+          </article>
+          <article class="step reveal d3">
+            <span class="step-n"></span>
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h8"/><path d="M21 12a9 9 0 1 1-4-7.5"/><path d="M18 5v4h-4"/></svg>
+            <h3>Negotiate &amp; book</h3>
+            <p>Chat, agree a final price, and book. The agreed price locks in, so there are no surprises when the work is done.</p>
+          </article>
+          <article class="step reveal d4">
+            <span class="step-n"></span>
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
+            <h3>Confirm &amp; pay</h3>
+            <p>Share a 4-digit code to close the job, then pay in cash directly. Fauran never touches your money.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FEATURES ============================ -->
+    <section id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Built for real trust</span>
+          <h2 id="features-title">Everything that makes the bid worth taking.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature reveal d1">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></svg></span>
+            <h3>Only pros near you</h3>
+            <p>Jobs are matched by distance, so the pros who bid can actually reach you fast.</p>
+          </article>
+          <article class="feature reveal d2">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m14 6 6 6"/><path d="M4 20 9 15"/><path d="m9.5 9.5 5 5"/><path d="m17 3 4 4-3 3-4-4Z"/><path d="M8.5 14.5 4 19l1 3 3-1 4.5-4.5"/></svg></span>
+            <h3>Real bidding, not menus</h3>
+            <p>You name the need and pros compete on price and speed. No Pakistani app offers this today.</p>
+          </article>
+          <article class="feature reveal d3">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 2.6 5.4 5.9.8-4.3 4.2 1 5.9L12 16.8 6.8 19.5l1-5.9-4.3-4.2 5.9-.8Z"/></svg></span>
+            <h3>Ratings that mean something</h3>
+            <p>Two-way reviews and job history build a track record that only exists inside Fauran.</p>
+          </article>
+          <article class="feature reveal d4">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h8"/><path d="M8 14h5"/><path d="M21 12a9 9 0 1 1-3.4-7"/><path d="M17 3v4h4"/></svg></span>
+            <h3>Private chat, hidden numbers</h3>
+            <p>Chat opens once a bid lands; phone numbers stay hidden until you book. Less spam, safer contact.</p>
+          </article>
+          <article class="feature span-2 reveal d1">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5"/></svg></span>
+            <h3>The trades people actually call for</h3>
+            <p>Launching with the everyday jobs that go wrong at home, with more added as pros join.</p>
+            <div class="trades">
+              <span class="trade">Plumber</span>
+              <span class="trade">Electrician</span>
+              <span class="trade">AC technician</span>
+              <span class="trade">Carpenter</span>
+              <span class="trade">Painter</span>
+              <span class="trade">Handyman</span>
+            </div>
+          </article>
+          <article class="feature reveal d2">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="6" width="19" height="13" rx="2.5"/><path d="M16 12h2.5"/><path d="M2.5 10h19"/></svg></span>
+            <h3>Free for customers</h3>
+            <p>Posting a job and getting bids costs you nothing. Pros pay a small commission, never you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ TRUST ============================ -->
+    <section id="trust" class="trust" aria-labelledby="trust-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Trust &amp; safety</span>
+          <h2 id="trust-title">Every pro is verified. Your cash stays yours.</h2>
+        </div>
+        <div class="trust-grid">
+          <div class="trust-badge reveal">
+            <span class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.4 7.8 8 9 4.6-1.2 8-4 8-9V6Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>CNIC + selfie verified</h3>
+            <p>Every professional is manually reviewed against their CNIC and a live selfie before they can bid.</p>
+            <span class="verified-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Verified professional</span>
+          </div>
+          <div class="trust-points">
+            <div class="tpoint reveal d1">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+              <div><h3>Cash, paid directly</h3><p>You hand the agreed price to the pro when the job's done. Fauran never holds or touches your money.</p></div>
+            </div>
+            <div class="tpoint reveal d2">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 9h18"/><path d="M7 15h3"/></svg></span>
+              <div><h3>No platform fee added to you</h3><p>Pros pre-fund a small wallet and the commission leaves <em>their</em> balance when they win. The price you agree is the whole price.</p></div>
+            </div>
+            <div class="tpoint reveal d3">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 15v2"/></svg></span>
+              <div><h3>The code closes the job</h3><p>A 4-digit code you share confirms the work is really done before anything is marked complete.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ WAITLIST ============================ -->
+    <section id="waitlist" class="waitlist" aria-labelledby="waitlist-title">
+      <div class="container">
+        <div class="waitlist-card reveal">
+          <span class="eyebrow" style="justify-content:center">Be first in your city</span>
+          <h2 id="waitlist-title">Join the Fauran waitlist</h2>
+          <p class="lead">Drop your number and we'll send one text the day bidding opens near you. Lahore and Islamabad first.</p>
+
+          <form class="form js-waitlist-form" data-source="main" novalidate>
+            <input type="text" class="hp" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="form-field">
+              <label for="main-phone">Phone number</label>
+              <div class="phone-group">
+                <span class="cc" aria-hidden="true">+92</span>
+                <input class="control js-phone" id="main-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="3XX XXXXXXX" required aria-describedby="main-phone-err" />
+              </div>
+              <p class="field-error" id="main-phone-err" data-error>Enter a valid Pakistani mobile number, e.g. 301 2345678.</p>
+            </div>
+
+            <div class="two-col">
+              <div class="form-field">
+                <label for="main-city">City</label>
+                <select class="control" id="main-city" name="city">
+                  <option value="">Select your city</option>
+                  <option value="lahore">Lahore</option>
+                  <option value="islamabad">Islamabad</option>
+                  <option value="other">Somewhere else</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="main-role">I want to…</label>
+                <select class="control" id="main-role" name="role">
+                  <option value="">Choose one</option>
+                  <option value="hirer">Hire a pro</option>
+                  <option value="pro">Work as a pro</option>
+                </select>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">
+              <span class="spin" aria-hidden="true"></span><span class="label">Join the waitlist</span>
+            </button>
+
+            <p class="form-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+              We only use your number to tell you when Fauran launches. No spam, ever.
+            </p>
+            <p class="form-status" role="status" aria-live="polite" data-status></p>
+          </form>
+
+          <div class="form-success" data-success>
+            <span class="success-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <h2>You're on the list.</h2>
+            <p class="lead" style="margin:8px auto 0">We'll text you the moment Fauran opens for bidding in your city. Ab kam hoga, fauran.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Questions</span>
+          <h2 id="faq-title">Good to know</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq reveal">
+            <summary>What is Fauran?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Fauran is a bid-and-book app for home and repair work in Pakistan. You post a job, verified pros nearby bid a price and arrival time, and you pick the one you want. "Ab Kam Hoga, Fauran" means the work gets done, right away.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>How is this different from other home-services apps?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Most apps set a fixed price and you can't negotiate. On Fauran, you name the need and pros compete by bidding on price and how fast they can arrive. That competition is the whole point.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Is it free for customers?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Yes. Posting a job and receiving bids costs you nothing. Professionals pay a small commission on jobs they win. It comes out of their own prepaid wallet, never added to your price.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>How do I pay?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>In cash, directly to the pro, once the job is done. You share a 4-digit completion code to confirm the work, then hand over the agreed price. Fauran never holds your money.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>Are the professionals verified?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>Every pro is manually reviewed against their CNIC and a live selfie before they're allowed to bid. Ratings and job history build on top of that over time.</p></div>
+          </details>
+          <details class="faq reveal">
+            <summary>When does it launch?<span class="plus" aria-hidden="true"></span></summary>
+            <div class="faq-body"><p>We're starting in Lahore and Islamabad, then expanding city by city. Join the waitlist and we'll text you the day bidding opens near you.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Fauran home">
+            <img src="assets/fauran-logo.svg" alt="" width="30" height="30" />
+            <span>Fauran</span>
+          </a>
+          <p class="footer-tag">Ab Kam Hoga, Fauran. A bid-and-book marketplace for verified home services in Pakistan.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#trust">Trust &amp; safety</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#waitlist">Join the waitlist</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Fauran</h4>
+          <ul>
+            <li><a href="mailto:[PLACEHOLDER]">Contact: <span class="ph">[PLACEHOLDER]</span></a></li>
+            <li><a href="tel:[PLACEHOLDER]">Support: <span class="ph">[PLACEHOLDER]</span></a></li>
+            <li><a href="#" rel="nofollow">Instagram <span class="ph">[PLACEHOLDER]</span></a></li>
+            <li><a href="#" rel="nofollow">Facebook <span class="ph">[PLACEHOLDER]</span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Fauran. <span class="ph">[PLACEHOLDER]</span> registration.</span>
+        <span>
+          <a href="#" rel="nofollow">Privacy <span class="ph">[PLACEHOLDER]</span></a>
+          &nbsp;·&nbsp;
+          <a href="#" rel="nofollow">Terms <span class="ph">[PLACEHOLDER]</span></a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================ STICKY CTA (mobile) ============================ -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <div class="sc-text">
+      <strong>Ab kam hoga, fauran.</strong>
+      <span>Get one text when we launch.</span>
+    </div>
+    <a class="btn btn-primary" href="#waitlist">Join</a>
+  </div>
+
+  <!-- ============================ UI behaviours (no framework) ============================ -->
+  <script>
+    (function () {
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Scroll-reveal via IntersectionObserver (no scroll listeners) */
+      var reveals = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        reveals.forEach(function (el) { el.classList.add('in'); });
+      } else {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+        reveals.forEach(function (el) { io.observe(el); });
+      }
+
+      /* Phone carousel */
+      var screens = Array.prototype.slice.call(document.querySelectorAll('.phone-screen .screen'));
+      var dotsWrap = document.querySelector('.phone-dots');
+      if (screens.length && dotsWrap) {
+        var i = 0, timer = null, DELAY = 3200;
+        var labels = ['Post a job', 'Compare bids', 'On the way', 'Confirm & pay'];
+        screens.forEach(function (s, idx) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('role', 'tab');
+          b.setAttribute('aria-label', labels[idx] || ('Step ' + (idx + 1)));
+          b.setAttribute('aria-current', idx === 0 ? 'true' : 'false');
+          b.addEventListener('click', function () { go(idx); rest(); });
+          dotsWrap.appendChild(b);
+        });
+        var dots = Array.prototype.slice.call(dotsWrap.children);
+        function go(n) {
+          i = (n + screens.length) % screens.length;
+          screens.forEach(function (s, idx) { s.classList.toggle('active', idx === i); });
+          dots.forEach(function (d, idx) { d.setAttribute('aria-current', idx === i ? 'true' : 'false'); });
+        }
+        function next() { go(i + 1); }
+        function start() { if (!reduce && !timer) timer = setInterval(next, DELAY); }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+        function rest() { stop(); start(); }
+        var stage = document.querySelector('.phone-stage');
+        if (stage) {
+          stage.addEventListener('mouseenter', stop);
+          stage.addEventListener('mouseleave', start);
+          stage.addEventListener('focusin', stop);
+          stage.addEventListener('focusout', start);
+        }
+        document.addEventListener('visibilitychange', function () { document.hidden ? stop() : start(); });
+        start();
+      }
+
+      /* Sticky mobile CTA: show after hero scrolls out, hide near the form */
+      var sticky = document.getElementById('stickyCta');
+      var heroEl = document.querySelector('.hero');
+      var formEl = document.getElementById('waitlist');
+      if (sticky && heroEl && 'IntersectionObserver' in window) {
+        var heroVisible = true, formVisible = false;
+        function update() {
+          var show = !heroVisible && !formVisible;
+          sticky.classList.toggle('show', show);
+          sticky.setAttribute('aria-hidden', show ? 'false' : 'true');
+        }
+        new IntersectionObserver(function (e) { heroVisible = e[0].isIntersecting; update(); }, { threshold: 0.25 }).observe(heroEl);
+        new IntersectionObserver(function (e) { formVisible = e[0].isIntersecting; update(); }, { threshold: 0.2 }).observe(formEl);
+      }
+    })();
+  </script>
+
+  <!-- Firebase waitlist write: isolated single swap point, module (defers by default) -->
+  <script type="module" src="waitlist.js"></script>
+</body>
+</html>

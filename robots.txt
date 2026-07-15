@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: confirm production domain (see README) — replace fauran.pk if different.
+Sitemap: https://fauran.pk/sitemap.xml
