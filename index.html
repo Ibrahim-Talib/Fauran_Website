@@ -104,7 +104,6 @@
           </div>
 
           <!-- Phone mockup (PRD-accurate app preview; carousel) -->
-          <div class="phone-col">
           <div class="phone-stage" aria-hidden="false">
             <div class="phone">
               <div class="phone-screen" role="group" aria-roledescription="carousel" aria-label="How Fauran works">
@@ -179,7 +178,6 @@
             </div>
           </div>
           <div class="phone-dots" role="tablist" aria-label="App preview steps"></div>
-          </div>
         </div>
       </div>
     </section>
@@ -479,6 +477,24 @@
   <script>
     (function () {
       var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* Theme toggle (persisted) */
+      var root = document.documentElement;
+      try {
+        var saved = localStorage.getItem('fauran-theme');
+        if (saved) root.setAttribute('data-theme', saved);
+      } catch (e) {}
+      var tt = document.getElementById('themeToggle');
+      if (tt) tt.addEventListener('click', function () {
+        var cur = root.getAttribute('data-theme');
+        var isDark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var next = isDark ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('fauran-theme', next); } catch (e) {}
+        var m = next === 'dark' ? '#171d18' : '#e8ece3';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', m);
+      });
 
       /* Scroll-reveal via IntersectionObserver (no scroll listeners) */
       var reveals = document.querySelectorAll('.reveal');
